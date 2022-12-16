@@ -67,7 +67,7 @@ const Mains = () => {
           todos.map(todo => (
             <div >
               {
-                <Card key={todo.population} img={todo.flags.svg} name={todo.name.common} population={todo.population} region={todo.region} capital={todo.capital?.[0]}/>
+                <Card key={todo.population} img={todo.flags.png} name={todo.name.common} population={todo.population} region={todo.region} capital={todo.capital?.[0]}/>
               }
             </div>
 
