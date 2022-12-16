@@ -4,6 +4,7 @@ export const Search = ({setValue})=>{
   const getValue = (evt)=>{
   if(evt.code === "Enter"){
     setValue(evt.target.value);
+    evt.target.value = ""
   }
   }
 
