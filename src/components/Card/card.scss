@@ -1,16 +1,25 @@
 
 .card__item{
   // width: 100%;
-  width: 264px;
+  width: 280px;
+  height: 370px;
   background-color: #FFFFFF;
 box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
 border-radius: 5px;
 margin-bottom: 60px;
 }
 
+// .cover__img{
+//   height: 100%;
+//   max-height: 160px;
+// }
+
 .card__img{
   width: 100%;
-  height: 160px;
+  // min-height: ;
+  min-height: 160px;
+  max-height: 160px;
+  object-fit: cover;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
@@ -26,6 +35,8 @@ font-size: 18px;
 line-height: 26px;
 margin: 0;
 margin-bottom: 16px;
+color: black;
+
 }
 
 .card__text{
@@ -40,4 +51,8 @@ color: #111517;
   font-size: 16px;
   line-height: 16px;
   color: #252a2daf;
+}
+
+.card__link{
+  text-decoration: none;
 }

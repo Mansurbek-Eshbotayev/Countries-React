@@ -4,6 +4,8 @@ import Card from "../Card/Card";
 import { Search, Select } from "../Search/Search";
 import "./main.scss"
 import {useEffect, useState} from 'react';
+// import { Route , Routes } from "react-router-dom";
+// import { Single } from "../pages/Single/Single";
 
 const Mains = () => {
   const [todos, setTodus] = useState([])
@@ -11,6 +13,7 @@ const Mains = () => {
   const [isError, setisError] = useState(false)
   const [value, setValue] = useState("")
   const [select, setSelect] = useState("")
+
   
  useEffect(() => {
   if(value.length){
@@ -58,6 +61,7 @@ const Mains = () => {
     <div className="country__inner">
     <Search setValue={setValue} />
     <Select setSelect={setSelect} />
+    
     </div>
    {Loading && <h1>Loading..</h1>}
      {isError && <h1>error..</h1>}
@@ -65,7 +69,7 @@ const Mains = () => {
       <ul className='card__list'>
         {
           todos.map(todo => (
-            <div >
+            <div key={todo.name.common}>
               {
                 <Card key={todo.population} img={todo.flags.png} name={todo.name.common} population={todo.population} region={todo.region} capital={todo.capital?.[0]}/>
               }
