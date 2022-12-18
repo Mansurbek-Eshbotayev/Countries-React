@@ -4,7 +4,7 @@ const Header = () =>{
     <header className="header">
       <div className="container">
         <div className="header__inner">
-        <h1 className="headwer__title">Where in the world?</h1>
+        <h1 className="headwer__title m-0">Where in the world?</h1>
         <button className="header__btn">Dark Mode</button>
         </div>
       </div>
