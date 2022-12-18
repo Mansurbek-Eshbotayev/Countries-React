@@ -30,7 +30,7 @@ export const Single = () => {
          <div className="wrap__img ">
           <img className="info__img" src={item.flags.svg} alt="flag" />
          </div>
-         <div className="wrap__info w-100 pt-4">
+         <div className="wrap__info w-100 pt-1">
           <h3 className="info__title">
             {item.name.common}
           </h3>
