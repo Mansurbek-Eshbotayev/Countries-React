@@ -25,7 +25,7 @@ export const Single = () => {
            Back
         </button>
         {
-          singl.length && singl.map((item => (
+          singl.length !==0 && singl.map((item => (
             <div key={item.name.common} className="single__wrap d-flex">
          <div className="wrap__img ">
           <img className="info__img" src={item.flags.svg} alt="flag" />
