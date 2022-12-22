@@ -15,16 +15,16 @@ const Mains = () => {
   const [isError, setisError] = useState(false)
   const [value, setValue] = useState("")
   const [select, setSelect] = useState("")
-  const [second, setSecond] = useState([])
+  // const [second, setSecond] = useState([])
 
-  useEffect(()=>{
-    fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(json => {
-      setSecond(json)
-      setLoading(false)
-    })
-  },[])
+  // useEffect(()=>{
+  //   fetch('https://restcountries.com/v3.1/all')
+  //   .then(response => response.json())
+  //   .then(json => {
+  //     setSecond(json)
+  //     setLoading(false)
+  //   })
+  // },[])
 
   
  useEffect(() => {
@@ -33,7 +33,8 @@ const Mains = () => {
   .then(response => response.json())
   .then(json => {
     // setTodus(json)
-    {json?.length ? setTodus(json) : setTodus(second)}
+    // {json?.length ? setTodus(json) : setTodus(second)}
+    setTodus(json)
     setLoading(false)
   })
   .catch((err)=>{
