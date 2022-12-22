@@ -1,12 +1,16 @@
 .single{
+  height: 89.5vh;
   padding-top: 90px;
   font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 20px;
+overflow: hidden;
 }
 
 .single__button{
+  width: 136px;
+ 
   background-color: transparent;
   outline: none;
   border: none;
@@ -15,6 +19,11 @@ line-height: 20px;
   background: #FFFFFF;
 box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
 border-radius: 2px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 30px;
 }
 
 .single__wrap{
@@ -76,3 +85,35 @@ line-height: 19px;
 box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
 border-radius: 2px;
 }
+
+.single__button::before{
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url(../../../assets/Images/icons/dark.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.dark .single{
+  color: white;
+  background-color: #202C36;
+}
+
+.dark .single__button{
+  color: white;
+  background-color: #2B3844;
+}
+
+.dark .single__button::before{
+  background-image: url(../../../assets/Images/icons/white.svg);
+}
+
+.dark .border__btn{
+  color: white;
+  background-color: #2B3844;
+}
+
+

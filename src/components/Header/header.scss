@@ -1,8 +1,30 @@
-.header{
+header{
   padding: 23px 0;
-  background-color: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
 }
+
+.light{
+  background-color: #FFFFFF;
+}
+
+.dark{
+  background-color: #2B3844;
+  color: white;
+}
+
+
+.dark .heder__select{
+  color: white;
+  background-color: #202C36;
+}
+
+.dark .header__btn{
+  color: white;
+}
+
+
+
+
 
 .header__inner{
   display: flex;
@@ -36,4 +58,9 @@ align-items: center;
   background-image: url(../../assets//Images/moon.svg);
   display: inline-block;
   margin-right: 10px;
+}
+
+.heder__select{
+  padding: 7px;
+  border-radius: 4px;
 }

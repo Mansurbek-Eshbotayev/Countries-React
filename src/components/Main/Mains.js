@@ -3,16 +3,28 @@
 import Card from "../Card/Card";
 import { Search, Select } from "../Search/Search";
 import "./main.scss"
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
+import { ThemeContext } from "../../context/ThemeContex";
 // import { Route , Routes } from "react-router-dom";
 // import { Single } from "../pages/Single/Single";
 
 const Mains = () => {
+  const {theme} = useContext(ThemeContext)
   const [todos, setTodus] = useState([])
   const [Loading, setLoading] = useState(true)
   const [isError, setisError] = useState(false)
   const [value, setValue] = useState("")
   const [select, setSelect] = useState("")
+  const [second, setSecond] = useState([])
+
+  useEffect(()=>{
+    fetch('https://restcountries.com/v3.1/all')
+    .then(response => response.json())
+    .then(json => {
+      setSecond(json)
+      setLoading(false)
+    })
+  },[])
 
   
  useEffect(() => {
@@ -20,7 +32,8 @@ const Mains = () => {
     fetch(`https://restcountries.com/v3.1/name/${value}`)
   .then(response => response.json())
   .then(json => {
-    setTodus(json)
+    // setTodus(json)
+    {json?.length ? setTodus(json) : setTodus(second)}
     setLoading(false)
   })
   .catch((err)=>{
@@ -51,11 +64,10 @@ const Mains = () => {
     })
   }
 
-  
  },[value,select])
  
   return(
-    <main className="site-main">
+    <main className={theme}>
     <section className="countries">
     <div className="container">
     <div className="country__inner">
